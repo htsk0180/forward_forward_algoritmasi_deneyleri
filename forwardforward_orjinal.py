@@ -134,7 +134,7 @@ class FFNetwork(keras.Model):
             for layer_idx in range(1, len(self.layer_list)):
                 layer = self.layer_list[layer_idx]
                 h = layer(h)
-                goodness += [tf.math.reduce_mean(tf.math.pow(h, 2), 1)]
+                #goodness += [tf.math.reduce_mean(tf.math.pow(h, 2), 1)]
             goodness_per_label += [
                 tf.expand_dims(tf.reduce_sum(goodness, keepdims=True), 1)
             ]
